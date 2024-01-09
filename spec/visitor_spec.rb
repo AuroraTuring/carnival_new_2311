@@ -19,18 +19,22 @@ RSpec.describe Visitor do
     expect(@visitor1.preferences).to eq([])
   end
 
-  describe 'riders' do
-    it 'have preferences' do
+  describe 'visitor' do
+    it 'has preferences' do
       @visitor1.add_preference(:gentle)
       @visitor1.add_preference(:thrilling)
       expect(@visitor1.preferences).to eq(%i[gentle thrilling])
     end
 
-    it 'are tall enough' do
+    it 'is tall enough' do
       expect(@visitor1.tall_enough?(54)).to be true
       expect(@visitor2.tall_enough?(54)).to be false
       expect(@visitor3.tall_enough?(54)).to be true
       expect(@visitor1.tall_enough?(64)).to be false
+    end
+
+    it 'can spend money' do
+      
     end
   end
 end
