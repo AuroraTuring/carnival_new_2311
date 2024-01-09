@@ -17,7 +17,10 @@ class Ride
   end
 
   def board_rider(boarded_visitor)
-
+    if @rider_log[boarded_visitor] == nil
+      @rider_log[boarded_visitor] = 0
+    end
+    @rider_log[boarded_visitor] += 1
   end
 
 
