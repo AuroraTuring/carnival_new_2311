@@ -5,7 +5,11 @@ require './lib/ride'
 RSpec.describe Ride do
   before 'each' do 
     @visitor1 = Visitor.new('Bruce', 54, '$10')
+    @visitor1.add_preference(:gentle)
+    
     @visitor2 = Visitor.new('Tucker', 36, '$5')
+    @visitor2.add_preference(:gentle)
+    
     @ride1 = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
   end
 
@@ -22,12 +26,16 @@ RSpec.describe Ride do
 
   end
 
-  # describe 'ttt' do 
-  #   it 'ttt' do
-      
-  #   end
+  describe 'ride' do 
+    it 'boards riders' do
+      @ride1.board_rider(@visitor1)
+      @ride1.board_rider(@visitor2)
+      @ride1.board_rider(@visitor1)
 
-  # end
+      expect(@ride1.rider_log).to eq({@visitor1 => 2, @visitor2 => 1})
+    end
+
+  end
 
 end
 
