@@ -1,9 +1,9 @@
-class Ride 
+class Ride
 
-  attr_reader :name, 
-              :min_height, 
-              :admission_fee, 
-              :excitement, 
+  attr_reader :name,
+              :min_height,
+              :admission_fee,
+              :excitement,
               :total_revenue,
               :rider_log
 
