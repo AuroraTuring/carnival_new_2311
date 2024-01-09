@@ -1,5 +1,4 @@
 class Ride
-
   attr_reader :name,
               :min_height,
               :admission_fee,
@@ -17,11 +16,7 @@ class Ride
   end
 
   def board_rider(boarded_visitor)
-    if @rider_log[boarded_visitor] == nil
-      @rider_log[boarded_visitor] = 0
-    end
+    @rider_log[boarded_visitor] = 0 if @rider_log[boarded_visitor].nil?
     @rider_log[boarded_visitor] += 1
   end
-
-
 end
