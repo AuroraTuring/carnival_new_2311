@@ -4,7 +4,8 @@ class Ride
               :min_height, 
               :admission_fee, 
               :excitement, 
-              :total_revenue
+              :total_revenue,
+              :rider_log
 
   def initialize(attributes)
     @name = attributes[:name]
@@ -12,8 +13,12 @@ class Ride
     @admission_fee = attributes[:admission_fee]
     @excitement = attributes[:excitement]
     @total_revenue = 0
+    @rider_log = {}
   end
 
+  def board_rider(boarded_visitor)
+
+  end
 
 
 end
