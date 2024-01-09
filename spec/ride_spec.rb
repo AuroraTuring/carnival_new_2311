@@ -35,9 +35,9 @@ RSpec.describe Ride do
     end
 
     it 'have spending money' do
-      expect(visitor1.spending_money).to eq(8)
-      expect(visitor2.spending_money).to eq(4)
-      expect(ride1.total_revenue).to eq(3)
+      expect(@visitor1.spending_money).to eq(8)
+      expect(@visitor2.spending_money).to eq(4)
+      expect(@ride1.total_revenue).to eq(3)
     end
   end
 end
