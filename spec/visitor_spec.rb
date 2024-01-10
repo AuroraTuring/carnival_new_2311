@@ -33,8 +33,13 @@ RSpec.describe Visitor do
       expect(@visitor1.tall_enough?(64)).to be false
     end
 
-    it 'can spend money' do
-      
+    it "can spend money" do
+      expect(@visitor1.pay(1)).to eq(9)
+      expect(@visitor1.pay(1)).to eq(8)
+      expect(@visitor1.spending_money).to eq(8)
+
+      expect(@visitor2.pay(1)).to eq(4)
+      expect(@visitor2.spending_money).to eq(4)
     end
   end
 end
