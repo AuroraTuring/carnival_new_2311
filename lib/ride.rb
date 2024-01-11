@@ -16,6 +16,9 @@ class Ride
   end
 
   def board_rider(boarded_visitor)
+    # first, rider pays cost
+    # fail if they can't pay
+
     @rider_log[boarded_visitor] = 0 if @rider_log[boarded_visitor].nil?
     @rider_log[boarded_visitor] += 1
   end
